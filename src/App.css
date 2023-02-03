@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 100 14px 'Arial';
+}
+
+#main-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 320px;
+  height: 565px;
+  position: relative;
+}
+
+.calculator {
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+#############
+#  DISPLAY  #
+#############
+*/
+
+.calculator-display {
+  color: white;
+  background: #1c191c;
+  line-height: 165px;
+  font-size: 5em;
+}
+
+/*
+############
+#  KEYS    #
+############
+*/
+
+.calculator-keypad{
+  height: 450px;
+  display: flex;
+}
+
+.input-keys {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+button:active {
+  box-shadow: inset 0px 0px 80px 0px rgba(0,0,0,0.25);
+}
+
+.calculator-key.digit-keys {
+  background: #f1f1f1;
+  font-size: 2em;
+}
+
+.calculator-key.function-keys {
+  background: linear-gradient(to bottom, rgba(202,202,204,1) 0%, rgba(196,194,204,1) 100%);
+  font-size: 2em;
+}
+
+.calculator-key.operator-keys {
+  background:  linear-gradient(to bottom, rgba(252,156,23,1) 0%, rgba(247,126,27,1) 100%);
+  color: white;
+  border-right: 0;
+  font-size: 3em;
+}
+
+.calculator-key.key-0 {
+  width: 160px;
+  text-align: left;
+  padding-left: 36px;
+}
+
+.calculator-key {
+  width: 80px;
+  height: 80px;
+  border-top: 1px solid #777;
+  border-right: 1px solid #666;  
+  text-align: center;
+  line-height: 80px;
+}
