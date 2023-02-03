@@ -26,7 +26,7 @@ const Main = () => {
         setData((prevState) => ({
           ...prevState,
           displayValue:
-            data.displayValue === "0" ? value : data.displayValue + value,
+            data.displayValue === "0" ? value : parseFloat(data.displayValue) + parseFloat(value),
           waitingForOperand: true,
         }));
       }
